@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import "./styles.css"; 
+import "./FilmDetail.module.css"; 
+
 interface Film {
   id: string;
   title: string;
   image: string;
-  price: number;
+  price: number; 
 }
 
-const HomePage: React.FC = () => {
+const FilmList: React.FC = () => {
   const [films, setFilms] = useState<Film[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -18,7 +19,7 @@ const HomePage: React.FC = () => {
     axios
       .get("https://ghibliapi.vercel.app/films")
       .then((response) => {
-       
+        
         const filmsWithPrice = response.data.map((film: any) => ({
           ...film,
           price: Math.floor(Math.random() * 100) + 1, 
@@ -33,12 +34,6 @@ const HomePage: React.FC = () => {
       });
   }, []);
 
-  const handleAddToCart = (filmId: string) => {
-
-    console.log(`Added film with ID ${filmId} to cart`);
-    
-  };
-
   if (loading) {
     return <div className="container">Loading...</div>; 
   }
@@ -48,7 +43,7 @@ const HomePage: React.FC = () => {
   }
 
   return (
-    <div className="container home-page">
+    <div className="container film-list">
       {films.map((film) => (
         <div key={film.id} className="film-item">
           <Link to={`/${film.id}`}>
@@ -56,16 +51,11 @@ const HomePage: React.FC = () => {
             <p className="film-title">{film.title}</p>
           </Link>
           <p className="film-price">${film.price.toFixed(2)}</p>
-          <button
-            className="add-to-cart-button"
-            onClick={() => handleAddToCart(film.id)}
-          >
-            Add to Cart
-          </button>
+          <button className="add-to-cart-button">Add to Cart</button>
         </div>
       ))}
     </div>
   );
 };
 
-export default HomePage;
+export default FilmList;

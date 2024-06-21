@@ -1,7 +1,8 @@
+// app.route.tsx
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import MainApp from "./main-app";
 import HomePage from "./home-page";
-import AboutPage from "./about-page";
+import FilmDetail from "./FilmDetail"; // Import the FilmDetail component
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
       },
       {
         path: ":filmId",
-        element: <AboutPage />,
+        element: <FilmDetail />, // Route to FilmDetail component when filmId is in the URL
       },
     ],
   },

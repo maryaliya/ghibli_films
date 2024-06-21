@@ -1,0 +1,207 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(107, 135, 236);
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.home-page {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.film-details {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+  text-align: center; 
+}
+
+.film-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.film-details p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  max-height: 4.5em; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  line-height: 1.5em; 
+}
+
+.film-content {
+  margin-top: 20px;
+}
+
+
+.film-item {
+  width: calc(25% - 20px); 
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative; 
+  text-align: center; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+
+.film-item:hover {
+  box-shadow: burlywood;
+}
+
+.film-image {
+  width: 100%;
+  height: auto;
+  background-color: #000000; 
+  display: block;
+  margin: 0 auto 50px;
+}
+
+.film-image1 {
+  width: 20%;
+  height: auto;
+  background-color: #000000; 
+  display: block;
+  margin: 0 auto 50px;
+}
+
+
+.film-title {
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  font-size: 16px;
+  text-decoration: none; 
+  color: #000000; 
+}
+
+.film-title .japanese-title {
+  font-size: 18px;
+  font-style: italic;
+  color: white;
+}
+
+.film-price {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #000000;
+}
+
+.add-to-cart-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; /* Blue color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* Push button to the bottom */
+}
+
+.add-to-cart-button:hover {
+  background-color: #0056b3; 
+}
+
+
+.add-to-cart-button1 {
+  width: 20%;
+  padding: 10px;
+  background-color: hwb(84 16% 41%); 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto; 
+}
+
+.add-to-cart-button1:hover {
+  background-color: #0056b3; 
+}
+
+
+.app-header {
+  background-color: #020d22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
+}
+
+.app-logo {
+  width: 100px; 
+  height: auto;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1200px) {
+  .home-page .film-item {
+    width: calc(25% - 20px);
+  }
+}
+
+@media (max-width: 992px) {
+  .home-page .film-item {
+    width: calc(33.33% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page .film-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 576px) {
+  .home-page .film-item {
+    width: calc(100% - 20px);
+  }
+}
+
+/* style.css */
+
+.back-link {
+  display: block;
+  margin-top: 10px; 
+  text-align: center; 
+  color:white; 
+  text-decoration: none; 
+  font-size: 16px; 
+  transition: color 0.3s ease; 
+}
+
+.back-link:hover {
+  color: #0056b3; 
+}

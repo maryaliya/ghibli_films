@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Film } from "./film.interface";
+import "./styles.css";
 
 export function AboutPage() {
   const { filmId } = useParams();

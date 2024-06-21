@@ -1,0 +1,87 @@
+.home-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .home-page h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .film-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .film-item {
+    width: calc(33.33% - 10px); 
+    background-color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .film-item:hover {
+    opacity: 0.8;
+  }
+  
+  .film-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .film-item p {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .film-details {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 9999;
+    text-align: center; 
+  }
+  
+  .film-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .film-details p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    max-height: 4.5em; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    line-height: 1.5em; 
+  }
+
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  
+  
+  
